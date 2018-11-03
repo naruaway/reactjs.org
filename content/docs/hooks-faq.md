@@ -287,8 +287,8 @@ Here, we store the previous value of the `row` prop in a state variable so that 
 
 ```js
 function ScrollView({row}) {
-  let [isScrollingDown, setIsScrollingDown] = useState(false);
-  let [prevRow, setPrevRow] = useState(null);
+  const [isScrollingDown, setIsScrollingDown] = useState(false);
+  const [prevRow, setPrevRow] = useState(null);
 
   if (row !== prevRow) {
     // Row changed since last render. Update isScrollingDown.
@@ -518,3 +518,4 @@ Hooks synthesize ideas from several different sources:
 * [Algebraic effects](https://github.com/ocamllabs/ocaml-effects-tutorial#2-effectful-computations-in-a-pure-setting) in Multicore OCaml.
 
 [Sebastian Markbåge](https://github.com/sebmarkbage) came up with the original design for Hooks, later refined by [Andrew Clark](https://github.com/acdlite), [Sophie Alpert](https://github.com/sophiebits), [Dominic Gannaway](https://github.com/trueadm), and other members of the React team.
+
